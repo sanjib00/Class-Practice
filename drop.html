@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Country get</title>
+
+</head>
+<body>
+
+<h2>Let AJAX change this text</h2>
+<button type="button" onclick="xml()">Change Content</button>
+
+    <p id="demo"></p>
+<script>
+    function xml()
+    {
+        var xmlhttp;
+
+        if (window.XMLHttpRequest)
+        {
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                //alert(xmlhttp.responseText);
+
+                var objCountries = JSON.parse(xmlhttp.responseText);
+
+                //alert(typeof objCountries);
+
+                var options = "<select>";
+
+                var i;
+
+                for(i=0;i<objCountries.countries.length;i++)
+                {
+                   //document.write("Country ID: "+objCountries.countries[i].country.country_id+"<br/>");
+                   //document.write("Country Name: "+objCountries.countries[i].country.country_name+"<br/>");
+                   //document.write("<br/>");
+                    options += "<option value='"+objCountries.countries[i].country.country_id+"'>"+objCountries.countries[i].country.country_name+"</option>"
+
+                }
+                options += "</select>";
+
+                //alert(options);
+                document.getElementById('demo').innerHTML = options;
+
+            }
+        }
+
+        xmlhttp.open("GET","country.txt",true);
+        xmlhttp.send();
+    }
+
+
+
+</script>
+</body>
+</html>
+
+    
+
