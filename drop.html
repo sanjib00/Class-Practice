@@ -8,7 +8,7 @@
 <body>
 
 <h2>Drop down menu</h2>
-<button type="button" onclick="xml()">Change Content</button>
+<button type="button" onclick="xml()">Show</button>
 
     <p id="demo"></p>
 <script>
@@ -30,7 +30,7 @@
             {
                 //alert(xmlhttp.responseText);
 
-                var objCountries = JSON.parse(xmlhttp.responseText);
+                //var objCountries = JSON.parse(xmlhttp.responseText);
 
                 //alert(typeof objCountries);
 
@@ -54,7 +54,7 @@
             }
         }
 
-        xmlhttp.open("GET","country.php",true);
+        xmlhttp.open("GET","http://www.bikroy.com",true);
         xmlhttp.send();
     }
 
