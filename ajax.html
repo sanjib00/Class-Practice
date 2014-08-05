@@ -35,11 +35,12 @@ xmlhttp.onreadystatechange=function()
 	var option = "<select>";
   for (var i =0; i<obj.countries.length; i++)
   {
-	option += "<option value="+obj.countries[i].country.country_id+">" + obj.countries[i].country.country_name + "</option>";
-	alert(option);
+	option += "<option value='"+obj.countries[i].country.country_id+"'>" + obj.countries[i].country.country_name + "</option>";
+	//document.writeln(option);
   }
   
-  var option = "</select>";
+  var option += "</select>";
+  document.getElementById('demo').innerHTML = option;
   }
   
   
