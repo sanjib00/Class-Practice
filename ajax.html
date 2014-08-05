@@ -23,7 +23,14 @@ xmlhttp.onreadystatechange=function()
 	var json = xmlhttp.responseText;
 	obj = JSON.parse(json);
 	
-	alert(typeof obj);
+	//alert(typeof obj);
+	//alert(obj.countries[5].country.country_name);
+	
+	for (var i =0; i<obj.countries.length; i++)
+	{
+		alert (obj.countries[i].country.country_name);
+	}
+	
     }
   }
 xmlhttp.open("GET","country.txt",true);
