@@ -1,25 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
     <head>
         <title>jQuery HeatMap</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="description" content="A heat map with jQuery" />
-        <meta name="keywords" content="jquery, heatmap" />
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7243260-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
 		<style>
 		*{
 			margin:0;
@@ -60,10 +44,9 @@
     </head>
     <body>
 		<div class="title"></div>
-		<!-- <div><a href="http://tympanus.net/codrops/2010/02/08/a-jquery-heat-map" class="back"></a></div> -->
 		<span style="position:absolute" class="analyze" id="analyze">Analyze</span>
 		<div class="overlay" id="overlay" style="display:none;"></div>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
         <script>
 			$(function() {
 				$(document).bind({
@@ -99,6 +82,6 @@
 				});
 			});
         </script>
-		<script src="demoad.js"></script>
+		
     </body>
 </html>
