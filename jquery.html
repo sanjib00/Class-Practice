@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Working with Jquery</title>
+<style>
+    p {
+    margin: 20px 0 0;
+    }
+    b {
+    color: blue;
+    }
+</style>
+</head>
+<body>
+	<input id="check1" type="checkbox" checked="checked">
+    <label for="check1" id="lblid">Check me</label>
+    <p></p>
+	<script src="jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+	$( "input" )
+    .change(function() {
+    var $input = $( this );
+    $( "p" ).html( ".attr( 'checked' ): " + $input.attr( "checked" ) + "" +
+    ".prop( 'checked' ): " + $input.prop( "checked" ) + "" +
+    ".is( ':checked' ): " + $input.is( ":checked" ) + "" );
+    })
+    .change();
+	
+	$(document).ready(function(){
+	//jquery function as getter
+		console.log($('#lblid').attr('for','ASHIQ')
+		.css({'background-color':'red','width':'300px','display':'block'})
+		);
+		//jquery function as detter
+		console.log($('#lblid').attr('for','ASHIQ'));
+	});
+</script>
+   
+</body>
+</html>

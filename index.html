@@ -1,34 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
+<script src="jquery-2.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
 </head>
 <body>
-
-<script>
-	/*function getHTTPobject(){
-		var xhr = false;
-		if (window.XMLHttpRequest){
-			xhr = new XMLHttpRequest();
-		}
-		else if (window.ActiveXobject){
-			xhr = new ActiveXobject("Microsoft.XMLHTTP");
-		}
-		return xhr;
-	}
-	var request = getHTTPobject();
-	if (request) {
-		
-	}*/
-
-
-function showData() {
-    alert ("Hello FTFL");
-	var mydata = 'FTFL01';
-	alert(mydata);
-}
-
-</script>
-<button onclick="showData()">Show</button>
+<p>If you click on the "Hide" button, I will disappear.</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
 </body>
 </html>
-
